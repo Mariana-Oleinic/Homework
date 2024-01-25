@@ -3,3 +3,18 @@ background-color: #f5c343;
 font-family: 'Fira Sans', sans-serif;
 text-align: center;
 }
+a {
+    color: black;
+    font-weight: bold;
+}
+img {
+    display: block;
+    width: 100%;
+    height: 70px 
+}
+p {
+    color:aliceblue;
+}
+nav {
+    text-align: left;
+}
