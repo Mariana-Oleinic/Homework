@@ -88,7 +88,7 @@ Create an array containing 4 population values of 4 countries yourchoice. You ma
 Log to the console whether the array has 4 elements or not (true or false)   
 */
 let populations = [1441, 59.11, 47.42, 10.33];
-console.log(`Has the array "populations" 4 elements? Response: ${populations.length == 4}`);
+console.log(`Does the array "populations" have 4 elements? Response: ${populations.length == 4}`);
 console.log("");
 
 // Create an array called 'percentages' containing the percentages of the world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values    
@@ -152,21 +152,21 @@ console.log(`The array "percentages2" has the following elements: ${percentages2
 console.log("");
 
 // Confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is. 
-function checkContents(a, b){ 
-  if(a.length != b.length) return false;
+function check2ArraysContents(arrayA, arrayB){ 
+  if(arrayA.length != arrayB.length) return false;
   let count = 0;
-  for (let itemA of a){
-    for (let itemB of b){
+  for (let itemA of arrayA){
+    for (let itemB of arrayB){
      if(itemA === itemB) 
     count++;
     }
   }
-  if(count === a.length) return true;
+  if(count === arrayA.length) return true;
   else return false;
 }
-console.log(`This statement confirms whether the arrays "percentages": ${percentages} and "percentages2": ${percentages2} contain the same elements: ${checkContents(percentages, percentages2)}`);
-console.log(`This statement confirms whether the arrays "percentages": ${percentages} and "percentagesAlternative": ${percentagesAlternative} contain the same elements: ${checkContents(percentages, percentagesAlternative)}`);
-console.log(`This statement confirms whether the arrays "percentages": ${percentages} and "populations": ${populations} contain the same elements: ${checkContents(percentages, populations)}`);
+console.log(`This statement confirms whether the arrays "percentages": ${percentages} and "percentages2": ${percentages2} contain the same elements: ${check2ArraysContents(percentages, percentages2)}`);
+console.log(`This statement confirms whether the arrays "percentages": ${percentages} and "percentagesAlternative": ${percentagesAlternative} contain the same elements: ${check2ArraysContents(percentages, percentagesAlternative)}`);
+console.log(`This statement confirms whether the arrays "percentages": ${percentages} and "populations": ${populations} contain the same elements: ${check2ArraysContents(percentages, populations)}`);
 console.log("");
 
 // Looping Backwards and Loops in Loops
@@ -273,9 +273,9 @@ console.log(`${myCountry.country} has ${myCountry.population / 10**6} million ${
 console.log("");
 
 // Increase the country 's population by two million using dot notation,and then decrease it by two million using brackets notation.
-myCountry.population = myCountry.population + 2000000;
+myCountry.population += 2000000;
 console.log(`Increasing the country 's population by two million using dot notation: ${myCountry.population}`);
-myCountry['population'] = myCountry['population'] - 2000000;
+myCountry['population'] -= 2000000;
 console.log(`Decreasing it by two million using brackets notation: ${myCountry['population']}`);
 console.log("");
 
