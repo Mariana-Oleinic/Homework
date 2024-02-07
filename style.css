@@ -6,6 +6,8 @@ text-align: center;
 a {
     color: black;
     font-weight: bold;
+    text-align: center;
+    text-indent: 30%;
 }
 img {
     display: block;
@@ -15,6 +17,18 @@ img {
 p {
     color:aliceblue;
 }
-nav {
-    text-align: left;
+#clock{
+font-weight: bold;
+font-size: large;
+}
+#controls button{
+  cursor: pointer;  
+  margin: 1px;
+  border-radius: 5px;
+}
+#startBtn{
+    background-color: rgba(91, 161, 91, 0.6);
+}
+#stopBtn{
+    background-color:rgba(225, 86, 86, 0.8);
 }
